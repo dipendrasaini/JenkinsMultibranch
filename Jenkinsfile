@@ -7,7 +7,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'echo "multibranch Pipleine Main"'
+                sh 'echo "multibranch Pipleine test-3"'
             }
         }
 
