@@ -1,0 +1,32 @@
+// Jenkins Flow control using IF and else inside Steps block
+
+pipeline{
+
+    agent any
+
+    environment{
+        fname = "Dipendra"
+    }
+
+    stages {
+
+        stage("If else stage"){
+
+            steps{
+
+                echo "${fname}"
+                  // below is scripted blow its have differnt way to accessing env varible
+
+               script{
+                    if(env.fname == 'Dipendra'){
+                        echo 'Im inside If block'
+                    } 
+                    else{
+                        echo 'Im inside else block'
+                    }
+
+               }
+            }
+        }
+    }
+}

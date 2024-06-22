@@ -1,0 +1,69 @@
+// Execute jobs on jenkins node
+
+pipeline {
+
+    agent {
+        label 'node-1'
+    }
+
+    stages {
+        
+        stage("First Stage"){
+            
+            steps {
+                echo "Hi This is My First Example"
+                
+                echo "This is the second line in same step"
+            }
+        }
+        stage("Second Stage")
+        {
+            steps {
+                echo "Executing Second Step"
+                
+                echo "Second line in second step"
+            }
+        }
+         stage("Third Stage")
+        {
+            steps {
+                echo "Executing Third Step"
+                
+                echo "Third line in Third step"
+            }
+        }
+         stage("Fourth Stage")
+        {
+            steps {
+                echo "Executing Fourth Step"
+                
+                echo "Fourth line in Fourth step"
+            }
+        }
+         stage("Fivth Stage")
+        {
+            steps {
+                echo "Executing Fivth Step"
+                
+                echo "Fivth line in Fivth step"
+            }
+        }
+         stage("Sixth Stage")
+        {
+            steps {
+                echo "Executing Sixth Step"
+                
+                echo "Sixth line in Sixth step"
+            }
+        }
+         stage("Seventh Stage")
+        {
+            steps {
+                echo "Executing Seventh Step"
+                
+                echo "Seventh line in Seventh step"
+            }
+        }
+      }
+
+}

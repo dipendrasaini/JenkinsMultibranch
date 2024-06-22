@@ -1,0 +1,17 @@
+// configure Library in your manage jenkins
+
+@Library("mylibrary") _
+
+pipeline{
+    agent any
+
+    stages{
+
+        stage("Library Example"){
+
+            steps{
+                sayHello 'Dipendra...!'
+            }
+        }
+    }
+}

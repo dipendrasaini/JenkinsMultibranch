@@ -1,0 +1,24 @@
+// implement try catch statement 
+
+pipeline{
+
+agent any 
+environment{
+    name = "Dipendra"
+}
+
+stages {
+  stage('TryCatchStage'){
+    steps{
+        script{
+            try{
+                sh 'dipendra' //intenally provided wrong command
+            }
+            catch(e){
+                echo "Error occurred"
+            }
+        }
+    }
+  }
+}
+}

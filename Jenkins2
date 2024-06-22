@@ -1,0 +1,19 @@
+// this is the environment variable example
+
+pipeline{
+  agent any
+   environment  {
+      name = "Dipendra Saini"
+   }
+
+  stages {
+
+    stage ("Testing Env Variable")
+    {
+    steps{
+        echo "${name}"
+    }
+       
+    }
+  }
+}
